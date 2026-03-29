@@ -1,0 +1,617 @@
+/* ===== Reset & Base ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0A0A0F;
+  color: #F0F0F5;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ===== Serif heading font ===== */
+.serif {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+}
+
+/* ===== Utility ===== */
+.gold {
+  color: #C9A84C;
+}
+
+.text-white {
+  color: #F0F0F5;
+}
+
+.dim {
+  color: #9999AA;
+}
+
+/* ===== Layout ===== */
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.container--wide {
+  max-width: 800px;
+}
+
+.container--narrow {
+  max-width: 720px;
+}
+
+.container--center {
+  text-align: center;
+}
+
+/* ===== Shared: Small label ===== */
+.small-label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #C9A84C;
+  margin-bottom: 20px;
+}
+
+.small-label--center {
+  text-align: center;
+}
+
+/* ===== Fade-in animation ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger siblings */
+.fade-in:nth-child(2) { transition-delay: 0.07s; }
+.fade-in:nth-child(3) { transition-delay: 0.14s; }
+.fade-in:nth-child(4) { transition-delay: 0.21s; }
+.fade-in:nth-child(5) { transition-delay: 0.28s; }
+.fade-in:nth-child(6) { transition-delay: 0.35s; }
+.fade-in:nth-child(7) { transition-delay: 0.42s; }
+
+/* ===== Button ===== */
+.btn {
+  display: inline-block;
+  background: #C9A84C;
+  color: #0A0A0F;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 16px 40px;
+  border-radius: 8px;
+  transition: background 0.25s ease, transform 0.2s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn:hover {
+  background: #d4b65e;
+  transform: translateY(-1px);
+}
+
+/* ========================================
+   Section 1: Hero
+   ======================================== */
+.hero {
+  background: #0A0A0F;
+  padding: 60px 0 100px;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-bottom: 64px;
+}
+
+.hero-lead {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 20px;
+  color: #9999AA;
+  margin-bottom: 4px;
+  letter-spacing: 0.01em;
+}
+
+.hero-big {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(72px, 12vw, 120px);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  margin-bottom: 48px;
+}
+
+.hero-sub {
+  margin-bottom: 48px;
+}
+
+.hero-sub p {
+  font-weight: 400;
+  font-size: 17px;
+  color: #9999AA;
+  line-height: 2.2;
+}
+
+.hero-sub-highlight {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.big-inline {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: 44px;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.hero .btn {
+  margin-bottom: 16px;
+}
+
+.hero-note {
+  font-size: 13px;
+  color: #9999AA;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 36px 0 60px;
+  }
+  .hero-lead {
+    font-size: 15px;
+  }
+  .hero-big {
+    margin-bottom: 36px;
+  }
+  .big-inline {
+    font-size: 32px;
+  }
+}
+
+/* ========================================
+   Section 2: The Problem
+   ======================================== */
+.problem {
+  background: #0A0A0F;
+  padding: 140px 0;
+}
+
+.problem-lines {
+  margin-top: 8px;
+}
+
+.problem-lines p {
+  font-size: 17px;
+  line-height: 2.4;
+  max-width: 640px;
+}
+
+.problem-lines strong {
+  font-weight: 600;
+}
+
+.problem-big {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(28px, 4.5vw, 42px);
+  font-weight: 700;
+  color: #F0F0F5;
+  line-height: 1.3;
+  margin: 36px 0;
+  letter-spacing: -0.01em;
+}
+
+.problem-punchline {
+  margin-top: 40px;
+}
+
+.problem-punchline p {
+  font-size: 17px;
+  line-height: 2.2;
+  color: #CCCCDD;
+  max-width: 640px;
+}
+
+.problem-punchline strong {
+  font-weight: 700;
+}
+
+.gold-line {
+  width: 60px;
+  height: 2px;
+  background: #C9A84C;
+  margin-top: 56px;
+}
+
+@media (max-width: 640px) {
+  .problem {
+    padding: 80px 0;
+  }
+}
+
+/* ========================================
+   Section 3: How It Works
+   ======================================== */
+.how {
+  background: #141420;
+  padding: 140px 0;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  margin-top: 48px;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.step-num {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(80px, 14vw, 128px);
+  color: #C9A84C;
+  line-height: 0.85;
+  letter-spacing: -0.05em;
+  opacity: 0.3;
+}
+
+.step-content {
+  padding-top: 12px;
+  max-width: 480px;
+}
+
+.step-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(22px, 3vw, 28px);
+  margin-bottom: 16px;
+  color: #F0F0F5;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.step-desc {
+  font-size: 15px;
+  color: #9999AA;
+  line-height: 1.75;
+}
+
+/* 70% highlight */
+.how-highlight {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-top: 96px;
+  padding-top: 56px;
+  border-top: 1px solid rgba(201, 168, 76, 0.12);
+}
+
+.highlight-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
+.highlight-big {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(64px, 10vw, 96px);
+  color: #C9A84C;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+}
+
+.highlight-label {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #C9A84C;
+  opacity: 0.6;
+  margin-top: 4px;
+}
+
+.highlight-detail {
+  max-width: 320px;
+}
+
+.highlight-detail p {
+  font-size: 16px;
+  color: #9999AA;
+  line-height: 1.7;
+}
+
+@media (max-width: 640px) {
+  .how {
+    padding: 80px 0;
+  }
+  .steps {
+    gap: 56px;
+  }
+  .step {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .step-num {
+    opacity: 0.2;
+  }
+  .step-content {
+    padding-top: 0;
+  }
+  .how-highlight {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    margin-top: 64px;
+    padding-top: 40px;
+  }
+}
+
+/* ========================================
+   Section 4: What You Get
+   ======================================== */
+.offer {
+  background: #0A0A0F;
+  padding: 140px 0;
+}
+
+.offer-heading {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(28px, 4.5vw, 42px);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin-bottom: 56px;
+}
+
+.offer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 56px;
+}
+
+.offer-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.offer-num {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 400;
+  font-size: 32px;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  opacity: 0.35;
+  margin-bottom: 4px;
+}
+
+.offer-item-title {
+  display: block;
+  font-weight: 600;
+  font-size: 17px;
+  color: #F0F0F5;
+}
+
+.offer-item-desc {
+  display: block;
+  font-size: 14px;
+  color: #9999AA;
+  line-height: 1.5;
+}
+
+.offer-note {
+  font-family: 'Playfair Display', Georgia, serif;
+  margin-top: 56px;
+  font-style: italic;
+  font-size: 16px;
+  color: #9999AA;
+}
+
+@media (max-width: 640px) {
+  .offer {
+    padding: 80px 0;
+  }
+  .offer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* ========================================
+   Section 5: FAQ
+   ======================================== */
+.faq {
+  background: #141420;
+  padding: 140px 0;
+}
+
+.faq-heading {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(28px, 4.5vw, 42px);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.accordion {
+  margin-top: 48px;
+}
+
+.accordion-item {
+  border-bottom: 1px solid rgba(153, 153, 170, 0.12);
+}
+
+.accordion-item:first-child {
+  border-top: 1px solid rgba(153, 153, 170, 0.12);
+}
+
+.accordion-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  color: #F0F0F5;
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 28px 0;
+  cursor: pointer;
+  text-align: left;
+  gap: 16px;
+}
+
+.accordion-icon {
+  color: #C9A84C;
+  font-size: 22px;
+  font-weight: 400;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.accordion-trigger[aria-expanded="true"] .accordion-icon {
+  transform: rotate(45deg);
+}
+
+.accordion-panel {
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  max-height: 0;
+  padding-bottom: 0;
+}
+
+.accordion-panel[hidden] {
+  display: block;
+  max-height: 0;
+  padding-bottom: 0;
+}
+
+.accordion-panel.open {
+  max-height: 200px;
+  padding-bottom: 24px;
+}
+
+.accordion-panel p {
+  color: #9999AA;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+@media (max-width: 640px) {
+  .faq {
+    padding: 80px 0;
+  }
+}
+
+/* ========================================
+   Section 6: Final CTA
+   ======================================== */
+.final-cta {
+  background: #1A1A2E;
+  padding: 140px 0 60px;
+}
+
+.final-lead {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 18px;
+  color: #9999AA;
+  margin-bottom: 4px;
+}
+
+.final-headline {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(40px, 7vw, 72px);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  max-width: 640px;
+  margin: 0 auto 32px;
+}
+
+.final-sub {
+  font-size: 16px;
+  color: #9999AA;
+  margin-bottom: 44px;
+  line-height: 1.7;
+}
+
+.final-cta .btn {
+  margin-bottom: 20px;
+}
+
+.final-dm {
+  font-size: 15px;
+  color: #9999AA;
+  margin-bottom: 120px;
+}
+
+.final-dm a {
+  color: #C9A84C;
+  transition: color 0.2s ease;
+}
+
+.final-dm a:hover {
+  color: #d4b65e;
+}
+
+.footer p {
+  font-size: 12px;
+  color: #9999AA;
+}
+
+@media (max-width: 640px) {
+  .final-cta {
+    padding: 80px 0 40px;
+  }
+  .final-dm {
+    margin-bottom: 64px;
+  }
+}

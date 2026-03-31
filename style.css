@@ -12,8 +12,8 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  background: #0A0A0F;
-  color: #F0F0F5;
+  background: #0f0d0a;
+  color: #E8DCC8;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -39,11 +39,11 @@ ul {
 }
 
 .text-white {
-  color: #F0F0F5;
+  color: #E8DCC8;
 }
 
 .dim {
-  color: #9999AA;
+  color: #9B8E7E;
 }
 
 /* ===== Layout ===== */
@@ -104,27 +104,29 @@ ul {
 .btn {
   display: inline-block;
   background: #C9A84C;
-  color: #0A0A0F;
+  color: #0f0d0a;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 16px;
   padding: 16px 40px;
   border-radius: 8px;
-  transition: background 0.25s ease, transform 0.2s ease;
+  transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
   cursor: pointer;
   border: none;
+  box-shadow: 0 4px 20px rgba(201, 168, 76, 0.15);
 }
 
 .btn:hover {
   background: #d4b65e;
   transform: translateY(-1px);
+  box-shadow: 0 6px 28px rgba(201, 168, 76, 0.25);
 }
 
 /* ========================================
    Section 1: Hero
    ======================================== */
 .hero {
-  background: #0A0A0F;
+  background: #0f0d0a;
   padding: 60px 0 100px;
   min-height: 100svh;
   display: flex;
@@ -140,7 +142,7 @@ ul {
   font-weight: 400;
   font-style: italic;
   font-size: 20px;
-  color: #9999AA;
+  color: #9B8E7E;
   margin-bottom: 4px;
   letter-spacing: 0.01em;
 }
@@ -161,7 +163,7 @@ ul {
 .hero-sub p {
   font-weight: 400;
   font-size: 17px;
-  color: #9999AA;
+  color: #9B8E7E;
   line-height: 2.2;
 }
 
@@ -186,7 +188,7 @@ ul {
 
 .hero-note {
   font-size: 13px;
-  color: #9999AA;
+  color: #9B8E7E;
   letter-spacing: 0.02em;
 }
 
@@ -209,8 +211,9 @@ ul {
    Section 2: The Problem
    ======================================== */
 .problem {
-  background: #0A0A0F;
+  background: #0f0d0a;
   padding: 140px 0;
+  border-top: 1px solid rgba(201, 168, 76, 0.1);
 }
 
 .problem-lines {
@@ -231,7 +234,7 @@ ul {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: clamp(28px, 4.5vw, 42px);
   font-weight: 700;
-  color: #F0F0F5;
+  color: #E8DCC8;
   line-height: 1.3;
   margin: 36px 0;
   letter-spacing: -0.01em;
@@ -244,7 +247,7 @@ ul {
 .problem-punchline p {
   font-size: 17px;
   line-height: 2.2;
-  color: #CCCCDD;
+  color: #BFB09A;
   max-width: 640px;
 }
 
@@ -269,8 +272,9 @@ ul {
    Section 3: How It Works
    ======================================== */
 .how {
-  background: #141420;
+  background: #1a1510;
   padding: 140px 0;
+  border-top: 1px solid rgba(201, 168, 76, 0.1);
 }
 
 .steps {
@@ -307,14 +311,14 @@ ul {
   font-weight: 700;
   font-size: clamp(22px, 3vw, 28px);
   margin-bottom: 16px;
-  color: #F0F0F5;
+  color: #E8DCC8;
   line-height: 1.25;
   letter-spacing: 0;
 }
 
 .step-desc {
   font-size: 15px;
-  color: #9999AA;
+  color: #9B8E7E;
   line-height: 1.75;
 }
 
@@ -360,7 +364,7 @@ ul {
 
 .highlight-detail p {
   font-size: 16px;
-  color: #9999AA;
+  color: #9B8E7E;
   line-height: 1.7;
 }
 
@@ -394,8 +398,9 @@ ul {
    Section 4: What You Get
    ======================================== */
 .offer {
-  background: #0A0A0F;
+  background: #0f0d0a;
   padding: 140px 0;
+  border-top: 1px solid rgba(201, 168, 76, 0.1);
 }
 
 .offer-heading {
@@ -433,13 +438,13 @@ ul {
   display: block;
   font-weight: 600;
   font-size: 17px;
-  color: #F0F0F5;
+  color: #E8DCC8;
 }
 
 .offer-item-desc {
   display: block;
   font-size: 14px;
-  color: #9999AA;
+  color: #9B8E7E;
   line-height: 1.5;
 }
 
@@ -448,7 +453,7 @@ ul {
   margin-top: 56px;
   font-style: italic;
   font-size: 16px;
-  color: #9999AA;
+  color: #9B8E7E;
 }
 
 @media (max-width: 640px) {
@@ -465,15 +470,16 @@ ul {
    Section 4.5: Sample Gameplan
    ======================================== */
 .sample {
-  background: #1A1A2E;
+  background: #2a2318;
   padding: 140px 0;
+  border-top: 1px solid rgba(201, 168, 76, 0.1);
 }
 
 .sample-heading {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Playfair Display', Georgia, serif;
   font-weight: 700;
   font-size: 32px;
-  color: #F0F0F5;
+  color: #E8DCC8;
   margin-bottom: 12px;
 }
 
@@ -481,23 +487,24 @@ ul {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 16px;
-  color: #CCCCDD;
+  color: #9B8E7E;
   margin-bottom: 48px;
 }
 
 .sample-card {
-  background: #0A0A0F;
-  border: 1px solid #C9A84C;
+  background: #0f0d0a;
+  border: 1px solid rgba(201, 168, 76, 0.3);
   border-radius: 12px;
   padding: 40px;
   max-width: 400px;
   margin: 0 auto 48px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(201, 168, 76, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .sample-card:hover {
   transform: scale(1.02);
+  box-shadow: 0 24px 72px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(201, 168, 76, 0.15);
 }
 
 .sample-card-label {
@@ -518,10 +525,10 @@ ul {
 }
 
 .sample-card-name {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Playfair Display', Georgia, serif;
   font-weight: 700;
   font-size: 28px;
-  color: #F0F0F5;
+  color: #E8DCC8;
   text-align: center;
   margin-bottom: 4px;
 }
@@ -547,7 +554,7 @@ ul {
 }
 
 .sample-stat-num {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Playfair Display', Georgia, serif;
   font-weight: 700;
   font-size: 22px;
   color: #C9A84C;
@@ -557,7 +564,7 @@ ul {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 10px;
-  color: #9999AA;
+  color: #9B8E7E;
   margin-top: 4px;
 }
 
@@ -568,10 +575,10 @@ ul {
 }
 
 .sample-list-heading {
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
   font-size: 18px;
-  color: #F0F0F5;
+  color: #E8DCC8;
   margin-bottom: 12px;
 }
 
@@ -579,7 +586,7 @@ ul {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 14px;
-  color: #CCCCDD;
+  color: #BFB09A;
   line-height: 2.0;
 }
 
@@ -596,8 +603,9 @@ ul {
    Section 5: FAQ
    ======================================== */
 .faq {
-  background: #141420;
+  background: #1a1510;
   padding: 140px 0;
+  border-top: 1px solid rgba(201, 168, 76, 0.1);
 }
 
 .faq-heading {
@@ -615,11 +623,11 @@ ul {
 }
 
 .accordion-item {
-  border-bottom: 1px solid rgba(153, 153, 170, 0.12);
+  border-bottom: 1px solid rgba(139, 115, 85, 0.2);
 }
 
 .accordion-item:first-child {
-  border-top: 1px solid rgba(153, 153, 170, 0.12);
+  border-top: 1px solid rgba(139, 115, 85, 0.2);
 }
 
 .accordion-trigger {
@@ -629,7 +637,7 @@ ul {
   align-items: center;
   background: none;
   border: none;
-  color: #F0F0F5;
+  color: #E8DCC8;
   font-family: 'Inter', sans-serif;
   font-size: 17px;
   font-weight: 600;
@@ -670,7 +678,7 @@ ul {
 }
 
 .accordion-panel p {
-  color: #9999AA;
+  color: #9B8E7E;
   font-size: 15px;
   line-height: 1.8;
 }
@@ -685,15 +693,16 @@ ul {
    Section 6: Final CTA
    ======================================== */
 .final-cta {
-  background: #1A1A2E;
+  background: #2a2318;
   padding: 140px 0 60px;
+  border-top: 1px solid rgba(201, 168, 76, 0.1);
 }
 
 .final-lead {
   font-family: 'Playfair Display', Georgia, serif;
   font-style: italic;
   font-size: 18px;
-  color: #9999AA;
+  color: #9B8E7E;
   margin-bottom: 4px;
 }
 
@@ -709,7 +718,7 @@ ul {
 
 .final-sub {
   font-size: 16px;
-  color: #9999AA;
+  color: #9B8E7E;
   margin-bottom: 44px;
   line-height: 1.7;
 }
@@ -720,7 +729,7 @@ ul {
 
 .final-dm {
   font-size: 15px;
-  color: #9999AA;
+  color: #9B8E7E;
   margin-bottom: 120px;
 }
 
@@ -735,7 +744,7 @@ ul {
 
 .footer p {
   font-size: 12px;
-  color: #9999AA;
+  color: #8B7355;
 }
 
 @media (max-width: 640px) {

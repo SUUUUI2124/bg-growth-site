@@ -22,7 +22,7 @@
 
 .gp-back-link {
   font-family: 'EB Garamond', serif;
-  font-size: 0.95rem;
+  font-size: 15px;
   font-weight: 500;
   color: var(--accent-gold);
   transition: color 0.3s ease;
@@ -35,16 +35,16 @@
 .gp-label {
   font-family: 'EB Garamond', serif;
   font-weight: 600;
-  font-size: 0.7rem;
+  font-size: 14px;
   color: var(--accent-gold);
-  letter-spacing: 2.5px;
+  letter-spacing: 1.5px;
   margin-bottom: 12px;
 }
 
 .gp-disclaimer {
   font-family: 'EB Garamond', serif;
   font-weight: 400;
-  font-size: 0.95rem;
+  font-size: 15px;
   color: var(--text-secondary);
 }
 
@@ -62,7 +62,7 @@
 .gp-heading {
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: 700;
-  font-size: 1.6rem;
+  font-size: 32px;
   color: var(--text-primary);
   margin-bottom: 40px;
   letter-spacing: -0.02em;
@@ -71,20 +71,20 @@
 .gp-subheading {
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: 600;
-  font-size: 1.15rem;
+  font-size: 22px;
   color: var(--text-primary);
   margin-top: 36px;
   margin-bottom: 12px;
 }
 
 .gp-text {
-  font-size: 1rem;
+  font-size: 17px;
   color: var(--text-secondary);
   line-height: 1.8;
 }
 
 .gp-note {
-  font-size: 1rem;
+  font-size: 17px;
   color: var(--text-secondary);
   line-height: 1.8;
   margin-top: 32px;
@@ -123,7 +123,7 @@
 }
 
 .gp-audit-label {
-  font-size: 0.85rem;
+  font-size: 15px;
   font-weight: 500;
   color: var(--text-secondary);
   flex-shrink: 0;
@@ -131,7 +131,7 @@
 }
 
 .gp-audit-value {
-  font-size: 1rem;
+  font-size: 17px;
   font-weight: 600;
   color: var(--text-primary);
   text-align: right;
@@ -159,7 +159,7 @@
 
 .gp-opp-num {
   font-family: 'EB Garamond', serif;
-  font-size: 0.8rem;
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -169,14 +169,14 @@
 
 .gp-opp-title {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1.15rem;
+  font-size: 22px;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 8px;
 }
 
 .gp-opp-desc {
-  font-size: 0.95rem;
+  font-size: 15px;
   color: var(--text-secondary);
   line-height: 1.8;
 }
@@ -206,11 +206,11 @@
 .gp-num-big {
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: 700;
-  font-size: 1.6rem;
+  font-size: 28px;
 }
 
 .gp-num-label {
-  font-size: 0.8rem;
+  font-size: 14px;
   color: var(--text-secondary);
   margin-top: 6px;
   text-align: center;
@@ -243,14 +243,14 @@
 
 .gp-scenario-label {
   font-family: 'EB Garamond', serif;
-  font-size: 1rem;
+  font-size: 15px;
   font-weight: 600;
   color: var(--text-primary);
   min-width: 110px;
 }
 
 .gp-scenario-detail {
-  font-size: 0.85rem;
+  font-size: 15px;
   color: var(--text-secondary);
   flex: 1;
   text-align: center;
@@ -258,7 +258,7 @@
 
 .gp-scenario-total {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1.3rem;
+  font-size: 22px;
   font-weight: 700;
   color: var(--accent-gold);
   min-width: 90px;
@@ -290,9 +290,9 @@
 
 .gp-product-tag {
   font-family: 'EB Garamond', serif;
-  font-size: 0.7rem;
+  font-size: 14px;
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   color: var(--accent-gold);
   display: block;
   margin-bottom: 12px;
@@ -300,14 +300,14 @@
 
 .gp-product-name {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1.4rem;
+  font-size: 22px;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 8px;
 }
 
 .gp-product-meta {
-  font-size: 1rem;
+  font-size: 15px;
   color: var(--text-secondary);
   margin-bottom: 20px;
 }
@@ -318,7 +318,7 @@
 }
 
 .gp-product-list li {
-  font-size: 0.95rem;
+  font-size: 15px;
   color: var(--text-secondary);
   padding: 8px 0;
   padding-left: 20px;
@@ -331,7 +331,7 @@
   color: var(--accent-gold);
   position: absolute;
   left: 0;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 /* ===== Launch Phases ===== */
@@ -363,21 +363,21 @@
 
 .gp-phase-num {
   font-family: 'EB Garamond', serif;
-  font-size: 0.85rem;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.5px;
 }
 
 .gp-phase-days {
-  font-size: 0.8rem;
+  font-size: 14px;
   color: var(--text-secondary);
   font-weight: 500;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
 }
 
 .gp-phase-title {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1.15rem;
+  font-size: 22px;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 8px;
@@ -408,7 +408,7 @@
 
 .gp-slide-num {
   font-family: 'EB Garamond', serif;
-  font-size: 0.8rem;
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -417,7 +417,7 @@
 }
 
 .gp-slide-text {
-  font-size: 1rem;
+  font-size: 17px;
   color: var(--text-secondary);
   line-height: 1.8;
 }
@@ -441,7 +441,18 @@
   }
 
   .gp-heading {
-    font-size: 1.3rem;
+    font-size: 24px;
+  }
+
+  .gp-subheading {
+    font-size: 18px;
+  }
+
+  .gp-text,
+  .gp-note,
+  .gp-slide-text {
+    font-size: 16px;
+    line-height: 1.7;
   }
 
   .gp-audit-card {
@@ -455,6 +466,21 @@
 
   .gp-audit-value {
     text-align: left;
+    font-size: 16px;
+  }
+
+  .gp-opp-title,
+  .gp-phase-title,
+  .gp-product-name {
+    font-size: 18px;
+  }
+
+  .gp-opp-desc,
+  .gp-product-meta,
+  .gp-product-list li,
+  .gp-scenario-detail,
+  .gp-scenario-label {
+    font-size: 14px;
   }
 
   .gp-numbers-summary {
@@ -478,9 +504,5 @@
 
   .gp-product-card {
     padding: 24px 20px;
-  }
-
-  .gp-product-name {
-    font-size: 1.2rem;
   }
 }

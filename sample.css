@@ -1,12 +1,12 @@
 /* ========================================
-   Sample Gameplan Page Styles — Dark Academia
+   Sample Gameplan Page — Dark Academia Reference
    ======================================== */
 
 /* ===== Header ===== */
 .gp-header {
-  background: #0f0d0a;
+  background: var(--bg-primary);
   padding: 40px 0 60px;
-  border-bottom: 1px solid rgba(201, 168, 76, 0.12);
+  border-bottom: 1px solid var(--border);
 }
 
 .gp-header .logo {
@@ -21,47 +21,49 @@
 }
 
 .gp-back-link {
-  font-size: 14px;
+  font-family: 'EB Garamond', serif;
+  font-size: 0.95rem;
   font-weight: 500;
-  color: #C9A84C;
-  transition: color 0.2s ease;
+  color: var(--accent-gold);
+  transition: color 0.3s ease;
 }
 
 .gp-back-link:hover {
-  color: #d4b65e;
+  color: var(--accent-gold-dim);
 }
 
 .gp-label {
-  font-family: 'Inter', sans-serif;
+  font-family: 'EB Garamond', serif;
   font-weight: 600;
-  font-size: 11px;
-  color: #C9A84C;
-  letter-spacing: 2px;
+  font-size: 0.7rem;
+  color: var(--accent-gold);
+  letter-spacing: 2.5px;
   margin-bottom: 12px;
 }
 
 .gp-disclaimer {
-  font-family: 'Inter', sans-serif;
+  font-family: 'EB Garamond', serif;
   font-weight: 400;
-  font-size: 14px;
-  color: #9B8E7E;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
 }
 
 /* ===== Sections ===== */
 .gp-section {
-  background: #0f0d0a;
+  background: var(--bg-primary);
   padding: 100px 0;
+  border-top: 1px solid var(--border);
 }
 
 .gp-section--alt {
-  background: #1a1510;
+  background: var(--bg-secondary);
 }
 
 .gp-heading {
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: 700;
-  font-size: 28px;
-  color: #E8DCC8;
+  font-size: 1.6rem;
+  color: var(--text-primary);
   margin-bottom: 40px;
   letter-spacing: -0.02em;
 }
@@ -69,40 +71,43 @@
 .gp-subheading {
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: 600;
-  font-size: 18px;
-  color: #E8DCC8;
+  font-size: 1.15rem;
+  color: var(--text-primary);
   margin-top: 36px;
   margin-bottom: 12px;
 }
 
 .gp-text {
-  font-size: 15px;
-  color: #9B8E7E;
+  font-size: 1rem;
+  color: var(--text-secondary);
   line-height: 1.8;
 }
 
 .gp-note {
-  font-size: 15px;
-  color: #9B8E7E;
+  font-size: 1rem;
+  color: var(--text-secondary);
   line-height: 1.8;
   margin-top: 32px;
   padding: 16px 20px;
-  background: rgba(201, 168, 76, 0.06);
-  border-left: 3px solid #C9A84C;
-  border-radius: 4px;
+  background: rgba(201, 169, 110, 0.05);
+  border-left: 3px solid var(--accent-warm);
 }
 
 /* ===== Audit Card ===== */
 .gp-audit-card {
-  background: #1a1510;
-  border: 1px solid rgba(201, 168, 76, 0.2);
-  border-radius: 12px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
   padding: 28px 32px;
   margin-bottom: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.gp-audit-card:hover {
+  border-color: var(--accent-warm);
 }
 
 .gp-section--alt .gp-audit-card {
-  background: #0f0d0a;
+  background: var(--bg-primary);
 }
 
 .gp-audit-row {
@@ -110,7 +115,7 @@
   justify-content: space-between;
   align-items: baseline;
   padding: 10px 0;
-  border-bottom: 1px solid rgba(139, 115, 85, 0.12);
+  border-bottom: 1px solid var(--border);
 }
 
 .gp-audit-row:last-child {
@@ -118,37 +123,45 @@
 }
 
 .gp-audit-label {
-  font-size: 13px;
+  font-size: 0.85rem;
   font-weight: 500;
-  color: #9B8E7E;
+  color: var(--text-secondary);
   flex-shrink: 0;
   margin-right: 16px;
 }
 
 .gp-audit-value {
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: 600;
-  color: #E8DCC8;
+  color: var(--text-primary);
   text-align: right;
 }
 
 /* ===== Opportunity Cards ===== */
 .gp-opp-card {
-  background: #0f0d0a;
-  border-left: 3px solid #C9A84C;
-  border-radius: 8px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent-warm);
   padding: 24px 28px;
   margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.gp-opp-card:hover {
+  border-color: var(--accent-warm);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .gp-section:not(.gp-section--alt) .gp-opp-card {
-  background: #1a1510;
+  background: var(--bg-secondary);
 }
 
 .gp-opp-num {
-  font-size: 12px;
+  font-family: 'EB Garamond', serif;
+  font-size: 0.8rem;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   display: block;
   margin-bottom: 8px;
@@ -156,16 +169,16 @@
 
 .gp-opp-title {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 18px;
+  font-size: 1.15rem;
   font-weight: 700;
-  color: #E8DCC8;
+  color: var(--text-primary);
   margin-bottom: 8px;
 }
 
 .gp-opp-desc {
-  font-size: 14px;
-  color: #9B8E7E;
-  line-height: 1.7;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
 }
 
 /* ===== Numbers ===== */
@@ -181,27 +194,27 @@
   flex-direction: column;
   align-items: center;
   flex: 1;
-  background: #1a1510;
-  border-radius: 12px;
+  background: var(--bg-secondary);
   padding: 24px 16px;
-  border: 1px solid rgba(139, 115, 85, 0.12);
+  border: 1px solid var(--border);
 }
 
 .gp-section--alt .gp-num-item {
-  background: #0f0d0a;
+  background: var(--bg-primary);
 }
 
 .gp-num-big {
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: 700;
-  font-size: 28px;
+  font-size: 1.6rem;
 }
 
 .gp-num-label {
-  font-size: 12px;
-  color: #9B8E7E;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
   margin-top: 6px;
   text-align: center;
+  letter-spacing: 0.03em;
 }
 
 .gp-scenarios {
@@ -214,80 +227,88 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #1a1510;
-  border-radius: 8px;
+  background: var(--bg-secondary);
   padding: 18px 24px;
   border: 1px solid transparent;
+  transition: border-color 0.3s ease;
 }
 
 .gp-section--alt .gp-scenario {
-  background: #0f0d0a;
+  background: var(--bg-primary);
 }
 
 .gp-scenario--highlight {
-  border-color: #C9A84C;
+  border-color: var(--accent-warm);
 }
 
 .gp-scenario-label {
-  font-size: 14px;
+  font-family: 'EB Garamond', serif;
+  font-size: 1rem;
   font-weight: 600;
-  color: #E8DCC8;
+  color: var(--text-primary);
   min-width: 110px;
 }
 
 .gp-scenario-detail {
-  font-size: 13px;
-  color: #9B8E7E;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
   flex: 1;
   text-align: center;
 }
 
 .gp-scenario-total {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 20px;
+  font-size: 1.3rem;
   font-weight: 700;
-  color: #C9A84C;
+  color: var(--accent-gold);
   min-width: 90px;
   text-align: right;
 }
 
 /* ===== Product Card ===== */
 .gp-product-card {
-  background: #0f0d0a;
-  border: 1px solid rgba(201, 168, 76, 0.2);
-  border-radius: 12px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
   padding: 32px;
   margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.gp-product-card:hover {
+  border-color: var(--accent-warm);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .gp-section:not(.gp-section--alt) .gp-product-card {
-  background: #1a1510;
+  background: var(--bg-secondary);
 }
 
 .gp-product-card--secondary {
-  border-color: rgba(139, 115, 85, 0.2);
+  border-color: var(--border);
 }
 
 .gp-product-tag {
-  font-size: 11px;
+  font-family: 'EB Garamond', serif;
+  font-size: 0.7rem;
   font-weight: 600;
-  letter-spacing: 1.5px;
-  color: #C9A84C;
+  letter-spacing: 2px;
+  color: var(--accent-gold);
   display: block;
   margin-bottom: 12px;
 }
 
 .gp-product-name {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 24px;
+  font-size: 1.4rem;
   font-weight: 700;
-  color: #E8DCC8;
+  color: var(--text-primary);
   margin-bottom: 8px;
 }
 
 .gp-product-meta {
-  font-size: 15px;
-  color: #9B8E7E;
+  font-size: 1rem;
+  color: var(--text-secondary);
   margin-bottom: 20px;
 }
 
@@ -297,17 +318,17 @@
 }
 
 .gp-product-list li {
-  font-size: 14px;
-  color: #BFB09A;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
   padding: 8px 0;
   padding-left: 20px;
   position: relative;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .gp-product-list li::before {
   content: "\2726";
-  color: #C9A84C;
+  color: var(--accent-gold);
   position: absolute;
   left: 0;
   font-size: 12px;
@@ -317,13 +338,20 @@
 .gp-phase {
   margin-bottom: 32px;
   padding: 24px 28px;
-  background: #1a1510;
-  border-radius: 8px;
-  border-left: 3px solid #C9A84C;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent-warm);
+  transition: all 0.3s ease;
+}
+
+.gp-phase:hover {
+  border-color: var(--accent-warm);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .gp-section--alt .gp-phase {
-  background: #0f0d0a;
+  background: var(--bg-primary);
 }
 
 .gp-phase-header {
@@ -334,22 +362,24 @@
 }
 
 .gp-phase-num {
-  font-size: 13px;
+  font-family: 'EB Garamond', serif;
+  font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.5px;
 }
 
 .gp-phase-days {
-  font-size: 12px;
-  color: #9B8E7E;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
   font-weight: 500;
+  letter-spacing: 0.05em;
 }
 
 .gp-phase-title {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 18px;
+  font-size: 1.15rem;
   font-weight: 700;
-  color: #E8DCC8;
+  color: var(--text-primary);
   margin-bottom: 8px;
 }
 
@@ -362,33 +392,38 @@
 }
 
 .gp-slide {
-  background: #1a1510;
-  border-radius: 12px;
+  background: var(--bg-secondary);
   padding: 24px 28px;
-  border: 1px solid rgba(139, 115, 85, 0.15);
+  border: 1px solid var(--border);
+  transition: border-color 0.3s ease;
+}
+
+.gp-slide:hover {
+  border-color: var(--accent-warm);
 }
 
 .gp-section--alt .gp-slide {
-  background: #0f0d0a;
+  background: var(--bg-primary);
 }
 
 .gp-slide-num {
-  font-size: 12px;
+  font-family: 'EB Garamond', serif;
+  font-size: 0.8rem;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   display: block;
   margin-bottom: 10px;
 }
 
 .gp-slide-text {
-  font-size: 15px;
-  color: #BFB09A;
-  line-height: 1.7;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
 }
 
 .gp-slide-text strong {
-  color: #E8DCC8;
+  color: var(--text-primary);
 }
 
 /* ===== Responsive ===== */
@@ -406,7 +441,7 @@
   }
 
   .gp-heading {
-    font-size: 22px;
+    font-size: 1.3rem;
   }
 
   .gp-audit-card {
@@ -446,6 +481,6 @@
   }
 
   .gp-product-name {
-    font-size: 20px;
+    font-size: 1.2rem;
   }
 }

@@ -1,3 +1,16 @@
+/* ===== CSS Variables — Dark Academia ===== */
+:root {
+  --bg-primary: #1a1714;
+  --bg-secondary: #242019;
+  --bg-card: #2a2520;
+  --text-primary: #e8e0d4;
+  --text-secondary: #b8afa0;
+  --accent-gold: #c9a96e;
+  --accent-gold-dim: #a68b52;
+  --accent-warm: #8b6f4e;
+  --border: #3d352c;
+}
+
 /* ===== Reset & Base ===== */
 *, *::before, *::after {
   margin: 0;
@@ -11,10 +24,11 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background: #0f0d0a;
-  color: #E8DCC8;
-  line-height: 1.6;
+  font-family: 'EB Garamond', 'Georgia', serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.8;
+  font-size: 18px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -28,22 +42,17 @@ ul {
   list-style: none;
 }
 
-/* ===== Serif heading font ===== */
-.serif {
-  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
-}
-
 /* ===== Utility ===== */
 .gold {
-  color: #C9A84C;
+  color: var(--accent-gold);
 }
 
 .text-white {
-  color: #E8DCC8;
+  color: var(--text-primary);
 }
 
 .dim {
-  color: #9B8E7E;
+  color: var(--text-secondary);
 }
 
 /* ===== Layout ===== */
@@ -68,11 +77,12 @@ ul {
 
 /* ===== Shared: Small label ===== */
 .small-label {
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
+  font-family: 'EB Garamond', serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: #C9A84C;
+  color: var(--accent-gold-dim);
   margin-bottom: 20px;
 }
 
@@ -103,34 +113,49 @@ ul {
 /* ===== Button ===== */
 .btn {
   display: inline-block;
-  background: #C9A84C;
-  color: #0f0d0a;
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  padding: 16px 40px;
-  border-radius: 8px;
-  transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
-  cursor: pointer;
+  background: var(--accent-gold);
+  color: var(--bg-primary);
+  font-family: 'EB Garamond', serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  padding: 1rem 2.8rem;
   border: none;
-  box-shadow: 0 4px 20px rgba(201, 168, 76, 0.15);
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
-  background: #d4b65e;
-  transform: translateY(-1px);
-  box-shadow: 0 6px 28px rgba(201, 168, 76, 0.25);
+  background: var(--accent-gold-dim);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(201, 169, 110, 0.2);
 }
 
 /* ========================================
    Section 1: Hero
    ======================================== */
 .hero {
-  background: #0f0d0a;
+  background: var(--bg-primary);
   padding: 60px 0 100px;
   min-height: 100svh;
   display: flex;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(201, 169, 110, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 30%, rgba(139, 111, 78, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero .container {
+  position: relative;
 }
 
 .logo {
@@ -141,8 +166,8 @@ ul {
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: 400;
   font-style: italic;
-  font-size: 20px;
-  color: #9B8E7E;
+  font-size: 1.2rem;
+  color: var(--text-secondary);
   margin-bottom: 4px;
   letter-spacing: 0.01em;
 }
@@ -162,8 +187,8 @@ ul {
 
 .hero-sub p {
   font-weight: 400;
-  font-size: 17px;
-  color: #9B8E7E;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
   line-height: 2.2;
 }
 
@@ -187,9 +212,9 @@ ul {
 }
 
 .hero-note {
-  font-size: 13px;
-  color: #9B8E7E;
-  letter-spacing: 0.02em;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.04em;
 }
 
 @media (max-width: 640px) {
@@ -197,7 +222,7 @@ ul {
     padding: 36px 0 60px;
   }
   .hero-lead {
-    font-size: 15px;
+    font-size: 1rem;
   }
   .hero-big {
     margin-bottom: 36px;
@@ -211,9 +236,9 @@ ul {
    Section 2: The Problem
    ======================================== */
 .problem {
-  background: #0f0d0a;
+  background: var(--bg-primary);
   padding: 140px 0;
-  border-top: 1px solid rgba(201, 168, 76, 0.1);
+  border-top: 1px solid var(--border);
 }
 
 .problem-lines {
@@ -221,20 +246,21 @@ ul {
 }
 
 .problem-lines p {
-  font-size: 17px;
-  line-height: 2.4;
+  font-size: 1.1rem;
+  line-height: 2.2;
   max-width: 640px;
 }
 
 .problem-lines strong {
   font-weight: 600;
+  color: var(--text-primary);
 }
 
 .problem-big {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: clamp(28px, 4.5vw, 42px);
   font-weight: 700;
-  color: #E8DCC8;
+  color: var(--text-primary);
   line-height: 1.3;
   margin: 36px 0;
   letter-spacing: -0.01em;
@@ -245,20 +271,20 @@ ul {
 }
 
 .problem-punchline p {
-  font-size: 17px;
-  line-height: 2.2;
-  color: #BFB09A;
+  font-size: 1.1rem;
+  line-height: 2;
+  color: var(--text-secondary);
   max-width: 640px;
 }
 
 .problem-punchline strong {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .gold-line {
   width: 60px;
-  height: 2px;
-  background: #C9A84C;
+  height: 1px;
+  background: var(--accent-warm);
   margin-top: 56px;
 }
 
@@ -272,9 +298,9 @@ ul {
    Section 3: How It Works
    ======================================== */
 .how {
-  background: #1a1510;
+  background: var(--bg-secondary);
   padding: 140px 0;
-  border-top: 1px solid rgba(201, 168, 76, 0.1);
+  border-top: 1px solid var(--border);
 }
 
 .steps {
@@ -295,10 +321,10 @@ ul {
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: 700;
   font-size: clamp(80px, 14vw, 128px);
-  color: #C9A84C;
+  color: var(--accent-gold-dim);
   line-height: 0.85;
   letter-spacing: -0.05em;
-  opacity: 0.3;
+  opacity: 0.35;
 }
 
 .step-content {
@@ -311,15 +337,15 @@ ul {
   font-weight: 700;
   font-size: clamp(22px, 3vw, 28px);
   margin-bottom: 16px;
-  color: #E8DCC8;
+  color: var(--text-primary);
   line-height: 1.25;
   letter-spacing: 0;
 }
 
 .step-desc {
-  font-size: 15px;
-  color: #9B8E7E;
-  line-height: 1.75;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
 }
 
 /* 70% highlight */
@@ -329,7 +355,7 @@ ul {
   gap: 32px;
   margin-top: 96px;
   padding-top: 56px;
-  border-top: 1px solid rgba(201, 168, 76, 0.12);
+  border-top: 1px solid var(--border);
 }
 
 .highlight-block {
@@ -343,18 +369,18 @@ ul {
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: 700;
   font-size: clamp(64px, 10vw, 96px);
-  color: #C9A84C;
+  color: var(--accent-gold);
   line-height: 0.9;
   letter-spacing: -0.03em;
 }
 
 .highlight-label {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 0.85rem;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: #C9A84C;
-  opacity: 0.6;
+  letter-spacing: 0.15em;
+  color: var(--accent-gold-dim);
+  opacity: 0.7;
   margin-top: 4px;
 }
 
@@ -363,9 +389,9 @@ ul {
 }
 
 .highlight-detail p {
-  font-size: 16px;
-  color: #9B8E7E;
-  line-height: 1.7;
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
 }
 
 @media (max-width: 640px) {
@@ -398,9 +424,9 @@ ul {
    Section 4: What You Get
    ======================================== */
 .offer {
-  background: #0f0d0a;
+  background: var(--bg-primary);
   padding: 140px 0;
-  border-top: 1px solid rgba(201, 168, 76, 0.1);
+  border-top: 1px solid var(--border);
 }
 
 .offer-heading {
@@ -422,38 +448,50 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  padding: 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.offer-item:hover {
+  border-color: var(--accent-warm);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.25);
 }
 
 .offer-num {
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: 400;
-  font-size: 32px;
+  font-size: 2rem;
   letter-spacing: -0.02em;
   line-height: 1;
-  opacity: 0.35;
+  color: var(--accent-gold-dim);
+  opacity: 0.4;
   margin-bottom: 4px;
 }
 
 .offer-item-title {
   display: block;
-  font-weight: 600;
-  font-size: 17px;
-  color: #E8DCC8;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text-primary);
 }
 
 .offer-item-desc {
   display: block;
-  font-size: 14px;
-  color: #9B8E7E;
-  line-height: 1.5;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
 }
 
 .offer-note {
   font-family: 'Playfair Display', Georgia, serif;
   margin-top: 56px;
   font-style: italic;
-  font-size: 16px;
-  color: #9B8E7E;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
 }
 
 @media (max-width: 640px) {
@@ -462,7 +500,7 @@ ul {
   }
   .offer-grid {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 20px;
   }
 }
 
@@ -470,74 +508,71 @@ ul {
    Section 4.5: Sample Gameplan
    ======================================== */
 .sample {
-  background: #2a2318;
+  background: var(--bg-secondary);
   padding: 140px 0;
-  border-top: 1px solid rgba(201, 168, 76, 0.1);
+  border-top: 1px solid var(--border);
 }
 
 .sample-heading {
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: 700;
-  font-size: 32px;
-  color: #E8DCC8;
+  font-size: clamp(1.6rem, 4vw, 2rem);
+  color: var(--text-primary);
   margin-bottom: 12px;
 }
 
 .sample-sub {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  color: #9B8E7E;
+  font-size: 1.05rem;
+  color: var(--text-secondary);
   margin-bottom: 48px;
 }
 
 .sample-card {
-  background: #0f0d0a;
-  border: 1px solid rgba(201, 168, 76, 0.3);
-  border-radius: 12px;
+  background: var(--bg-primary);
+  border: 1px solid var(--accent-warm);
   padding: 40px;
   max-width: 400px;
   margin: 0 auto 48px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(201, 168, 76, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s ease;
 }
 
 .sample-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 24px 72px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(201, 168, 76, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 24px 72px rgba(0, 0, 0, 0.45), 0 0 0 1px var(--accent-warm);
 }
 
 .sample-card-label {
   display: block;
-  font-family: 'Inter', sans-serif;
+  font-family: 'EB Garamond', serif;
   font-weight: 600;
-  font-size: 11px;
-  color: #C9A84C;
-  letter-spacing: 2px;
+  font-size: 0.7rem;
+  color: var(--accent-gold);
+  letter-spacing: 2.5px;
   text-align: center;
 }
 
 .sample-card-line {
   width: 60px;
   height: 1px;
-  background: #C9A84C;
+  background: var(--accent-warm);
   margin: 16px auto;
 }
 
 .sample-card-name {
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: 700;
-  font-size: 28px;
-  color: #E8DCC8;
+  font-size: 1.6rem;
+  color: var(--text-primary);
   text-align: center;
   margin-bottom: 4px;
 }
 
 .sample-card-handle {
-  font-family: 'Inter', sans-serif;
+  font-family: 'EB Garamond', serif;
   font-weight: 400;
-  font-size: 16px;
-  color: #C9A84C;
+  font-size: 1rem;
+  color: var(--accent-gold);
   text-align: center;
   margin-bottom: 32px;
 }
@@ -556,16 +591,17 @@ ul {
 .sample-stat-num {
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: 700;
-  font-size: 22px;
-  color: #C9A84C;
+  font-size: 1.3rem;
+  color: var(--accent-gold);
 }
 
 .sample-stat-label {
-  font-family: 'Inter', sans-serif;
+  font-family: 'EB Garamond', serif;
   font-weight: 400;
-  font-size: 10px;
-  color: #9B8E7E;
+  font-size: 0.7rem;
+  color: var(--text-secondary);
   margin-top: 4px;
+  letter-spacing: 0.05em;
 }
 
 .sample-list {
@@ -577,17 +613,15 @@ ul {
 .sample-list-heading {
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: 700;
-  font-size: 18px;
-  color: #E8DCC8;
+  font-size: 1.15rem;
+  color: var(--text-primary);
   margin-bottom: 12px;
 }
 
 .sample-list-item {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  color: #BFB09A;
-  line-height: 2.0;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 2.2;
 }
 
 @media (max-width: 640px) {
@@ -603,9 +637,9 @@ ul {
    Section 5: FAQ
    ======================================== */
 .faq {
-  background: #1a1510;
+  background: var(--bg-primary);
   padding: 140px 0;
-  border-top: 1px solid rgba(201, 168, 76, 0.1);
+  border-top: 1px solid var(--border);
 }
 
 .faq-heading {
@@ -623,11 +657,11 @@ ul {
 }
 
 .accordion-item {
-  border-bottom: 1px solid rgba(139, 115, 85, 0.2);
+  border-bottom: 1px solid var(--border);
 }
 
 .accordion-item:first-child {
-  border-top: 1px solid rgba(139, 115, 85, 0.2);
+  border-top: 1px solid var(--border);
 }
 
 .accordion-trigger {
@@ -637,18 +671,23 @@ ul {
   align-items: center;
   background: none;
   border: none;
-  color: #E8DCC8;
-  font-family: 'Inter', sans-serif;
-  font-size: 17px;
-  font-weight: 600;
+  color: var(--text-primary);
+  font-family: 'EB Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 500;
   padding: 28px 0;
   cursor: pointer;
   text-align: left;
   gap: 16px;
+  transition: color 0.3s ease;
+}
+
+.accordion-trigger:hover {
+  color: var(--accent-gold);
 }
 
 .accordion-icon {
-  color: #C9A84C;
+  color: var(--accent-gold);
   font-size: 22px;
   font-weight: 400;
   flex-shrink: 0;
@@ -678,8 +717,8 @@ ul {
 }
 
 .accordion-panel p {
-  color: #9B8E7E;
-  font-size: 15px;
+  color: var(--text-secondary);
+  font-size: 1rem;
   line-height: 1.8;
 }
 
@@ -693,16 +732,16 @@ ul {
    Section 6: Final CTA
    ======================================== */
 .final-cta {
-  background: #2a2318;
+  background: var(--bg-secondary);
   padding: 140px 0 60px;
-  border-top: 1px solid rgba(201, 168, 76, 0.1);
+  border-top: 1px solid var(--border);
 }
 
 .final-lead {
   font-family: 'Playfair Display', Georgia, serif;
   font-style: italic;
-  font-size: 18px;
-  color: #9B8E7E;
+  font-size: 1.15rem;
+  color: var(--text-secondary);
   margin-bottom: 4px;
 }
 
@@ -717,10 +756,10 @@ ul {
 }
 
 .final-sub {
-  font-size: 16px;
-  color: #9B8E7E;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
   margin-bottom: 44px;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
 .final-cta .btn {
@@ -728,23 +767,24 @@ ul {
 }
 
 .final-dm {
-  font-size: 15px;
-  color: #9B8E7E;
+  font-size: 1rem;
+  color: var(--text-secondary);
   margin-bottom: 120px;
 }
 
 .final-dm a {
-  color: #C9A84C;
-  transition: color 0.2s ease;
+  color: var(--accent-gold);
+  transition: color 0.3s ease;
 }
 
 .final-dm a:hover {
-  color: #d4b65e;
+  color: var(--accent-gold-dim);
 }
 
 .footer p {
-  font-size: 12px;
-  color: #8B7355;
+  font-size: 0.85rem;
+  color: var(--accent-warm);
+  letter-spacing: 0.05em;
 }
 
 @media (max-width: 640px) {

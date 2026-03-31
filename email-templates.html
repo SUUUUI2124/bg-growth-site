@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Templates — BG Growth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #1a1714;
+      --bg-secondary: #242019;
+      --bg-card: #2a2520;
+      --text-primary: #e8e0d4;
+      --text-secondary: #b8afa0;
+      --accent-gold: #c9a96e;
+      --accent-gold-dim: #a68b52;
+      --accent-warm: #8b6f4e;
+      --border: #3d352c;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'EB Garamond', 'Georgia', serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.8;
+      font-size: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header */
+    .header {
+      padding: 40px 0 60px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 48px;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--accent-gold);
+    }
+
+    .back-link {
+      font-size: 19px;
+      color: var(--accent-gold);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .back-link:hover { color: var(--accent-gold-dim); }
+
+    .page-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .page-sub {
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 20px;
+    }
+
+    /* Template Cards */
+    .templates {
+      padding: 60px 0;
+    }
+
+    .template-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 36px;
+      margin-bottom: 32px;
+      position: relative;
+      transition: border-color 0.3s;
+    }
+
+    .template-card:hover {
+      border-color: var(--accent-warm);
+    }
+
+    .template-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--accent-gold-dim);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .template-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 20px;
+    }
+
+    /* Subject line */
+    .subject-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+      padding: 12px 16px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+    }
+
+    .subject-label {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--accent-gold-dim);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      flex-shrink: 0;
+    }
+
+    .subject-text {
+      font-size: 20px;
+      color: var(--text-primary);
+      flex: 1;
+    }
+
+    .subject-text .placeholder {
+      color: var(--accent-gold);
+      font-weight: 600;
+    }
+
+    .btn-copy-subject {
+      background: transparent;
+      border: 1px solid var(--accent-warm);
+      color: var(--accent-gold);
+      font-family: 'EB Garamond', serif;
+      font-size: 15px;
+      padding: 4px 14px;
+      cursor: pointer;
+      transition: all 0.3s;
+      flex-shrink: 0;
+    }
+
+    .btn-copy-subject:hover {
+      background: rgba(201, 169, 110, 0.1);
+    }
+
+    /* Body */
+    .template-body {
+      font-size: 20px;
+      color: var(--text-secondary);
+      line-height: 1.9;
+      white-space: pre-wrap;
+      margin-bottom: 24px;
+    }
+
+    .template-body .placeholder {
+      color: var(--accent-gold);
+      font-weight: 600;
+    }
+
+    /* Copy button */
+    .btn-copy {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      background: var(--accent-gold);
+      color: var(--bg-primary);
+      border: none;
+      font-family: 'EB Garamond', serif;
+      font-size: 17px;
+      font-weight: 500;
+      padding: 8px 24px;
+      cursor: pointer;
+      letter-spacing: 0.05em;
+      transition: all 0.3s;
+    }
+
+    .btn-copy:hover {
+      background: var(--accent-gold-dim);
+      transform: translateY(-1px);
+    }
+
+    .btn-copy.copied {
+      background: var(--accent-warm);
+    }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    .footer p {
+      font-size: 17px;
+      color: var(--accent-warm);
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .page-title { font-size: 30px; }
+      .template-card { padding: 24px; }
+      .template-title { font-size: 22px; }
+      .btn-copy { position: static; margin-bottom: 20px; display: block; text-align: center; }
+      .subject-row { flex-direction: column; gap: 8px; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <div class="header-inner">
+        <div class="logo">BG Growth</div>
+        <a href="index.html" class="back-link">&larr; Back to site</a>
+      </div>
+      <h1 class="page-title">Email Templates</h1>
+      <p class="page-sub">Click "Copy" to copy template body to clipboard</p>
+    </div>
+
+    <div class="templates">
+
+      <!-- Template 1 -->
+      <div class="template-card">
+        <button class="btn-copy" onclick="copyBody(this, 'body1')">Copy</button>
+        <div class="template-num">Template 01</div>
+        <h2 class="template-title">Initial Outreach</h2>
+        <div class="subject-row">
+          <span class="subject-label">Subject</span>
+          <span class="subject-text">quick idea for <span class="placeholder">[name]</span>'s brand</span>
+          <button class="btn-copy-subject" onclick="copySubject(this, 'quick idea for [name]\'s brand')">Copy</button>
+        </div>
+        <div class="template-body" id="body1">hi <span class="placeholder">[name]</span>,
+
+this might seem out of the blue but I was genuinely impressed by what you've built on instagram. <span class="placeholder">[1 line custom compliment]</span>
+
+i run a small growth marketing service where we help creators launch digital products — and i actually went ahead and built a free monetisation gameplan specifically for your brand. real numbers, real strategy.
+
+here's what a sample looks like: https://suuuui2124.github.io/bg-growth-site/sample.html
+
+yours would be fully customized to your content and audience. want me to send it over? no cost, no strings.
+
+best,
+BG Growth
+boss.growth67@gmail.com</div>
+      </div>
+
+      <!-- Template 2 -->
+      <div class="template-card">
+        <button class="btn-copy" onclick="copyBody(this, 'body2')">Copy</button>
+        <div class="template-num">Template 02</div>
+        <h2 class="template-title">Follow-up (Day 5)</h2>
+        <div class="subject-row">
+          <span class="subject-label">Subject</span>
+          <span class="subject-text">re: quick idea for <span class="placeholder">[name]</span>'s brand</span>
+          <button class="btn-copy-subject" onclick="copySubject(this, 're: quick idea for [name]\'s brand')">Copy</button>
+        </div>
+        <div class="template-body" id="body2">hi <span class="placeholder">[name]</span>,
+
+just following up on my last email — i built a free monetisation gameplan for your brand and would love to share it.
+
+quick overview of what's inside:
+- audience audit with engagement analysis
+- 3 revenue scenarios based on your actual numbers
+- custom product suggestion for your niche
+- 14-day launch strategy
+
+sample: https://suuuui2124.github.io/bg-growth-site/sample.html
+
+no cost, no strings. just thought it could be valuable.
+
+best,
+BG Growth</div>
+      </div>
+
+      <!-- Template 3 -->
+      <div class="template-card">
+        <button class="btn-copy" onclick="copyBody(this, 'body3')">Copy</button>
+        <div class="template-num">Template 03</div>
+        <h2 class="template-title">Gameplan Delivery</h2>
+        <div class="subject-row">
+          <span class="subject-label">Subject</span>
+          <span class="subject-text">your monetisation gameplan is ready</span>
+          <button class="btn-copy-subject" onclick="copySubject(this, 'your monetisation gameplan is ready')">Copy</button>
+        </div>
+        <div class="template-body" id="body3">hi <span class="placeholder">[name]</span>,
+
+thanks for getting back to me! here's your custom gameplan:
+
+<span class="placeholder">[PDF attachment or link]</span>
+
+the highlights:
+- your audience is worth more than brand deals alone (section 3)
+- there's a product idea that fits your brand perfectly (section 4)
+- the launch plan is designed for your exact audience (section 5)
+
+next step if you're interested: a simple demand test. i'll create a 3-slide carousel for you to post and we'll see how your audience responds. zero commitment until you're ready.
+
+best,
+BG Growth</div>
+      </div>
+
+      <!-- Template 4 -->
+      <div class="template-card">
+        <button class="btn-copy" onclick="copyBody(this, 'body4')">Copy</button>
+        <div class="template-num">Template 04</div>
+        <h2 class="template-title">Feedback Request (After Decline)</h2>
+        <div class="subject-row">
+          <span class="subject-label">Subject</span>
+          <span class="subject-text">re: quick idea for <span class="placeholder">[name]</span>'s brand</span>
+          <button class="btn-copy-subject" onclick="copySubject(this, 're: quick idea for [name]\'s brand')">Copy</button>
+        </div>
+        <div class="template-body" id="body4">totally understand, and thanks for letting me know.
+
+quick question if you don't mind — what was the main thing that didn't feel right? the approach, the offer, or something else?
+
+just trying to improve. any feedback is appreciated.
+
+thanks,
+BG Growth</div>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2026 BG Growth</p>
+    </div>
+  </div>
+
+  <script>
+    function copyBody(btn, id) {
+      const el = document.getElementById(id);
+      const text = el.innerText;
+      navigator.clipboard.writeText(text).then(function() {
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(function() {
+          btn.textContent = 'Copy';
+          btn.classList.remove('copied');
+        }, 2000);
+      });
+    }
+
+    function copySubject(btn, text) {
+      navigator.clipboard.writeText(text).then(function() {
+        btn.textContent = 'Copied!';
+        setTimeout(function() {
+          btn.textContent = 'Copy';
+        }, 2000);
+      });
+    }
+  </script>
+
+</body>
+</html>
